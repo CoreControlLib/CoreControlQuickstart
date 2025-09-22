@@ -31,5 +31,5 @@ repositories {
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation 'com.andreidurlea:corecontrol:0.1.0-SNAPSHOT'
+    implementation 'com.andreidurlea:corecontrol:1.0.0-alpha'
 }
