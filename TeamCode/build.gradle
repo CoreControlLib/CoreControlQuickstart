@@ -25,11 +25,11 @@ android {
 
 repositories {
     maven {
-        url "https://corecontrollib.github.io/Release/"
+        url "https://remote.corecontrollib.com"
     }
 }
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation 'com.andreidurlea:corecontrol:1.0.0-alpha'
+    implementation 'com.andreidurlea:corecontrol:1.1.0'
 }
