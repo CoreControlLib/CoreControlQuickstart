@@ -14,12 +14,28 @@
 // Include common definitions from above.
 apply from: '../build.common.gradle'
 apply from: '../build.dependencies.gradle'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+    }
+
     packagingOptions {
         jniLibs.useLegacyPackaging true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    kotlinOptions {
+        jvmTarget = '21'
     }
 }
 
@@ -31,5 +47,5 @@ repositories {
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation 'com.andreidurlea:corecontrol:1.1.0'
+    implementation 'com.andreidurlea:corecontrol:1.1.0.1'
 }
